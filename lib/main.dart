@@ -10,7 +10,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Text("hi"),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("앱임"),
+        ),
+        body: Text("안녕"),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.phone), label: 'phone'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.message), label: 'message'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.contact_page), label: 'contact_page'),
+          ],
+        ),
+      ),
     );
   }
 }
